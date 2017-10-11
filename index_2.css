@@ -1,0 +1,16 @@
+
+h1 {font-family:tahoma,verdana; text-align:center; font-size:140%; line-height:100%; font-weight:bold;}
+body {font-family:tahoma,verdana; font-size:80%; line-height:130%;}
+a {font-weight:normal;}
+a:link {color:#4a5db0}
+a:active {color:#4a5db0}
+a:visited {color:#4a5db0}
+a:hover{color:#000000}
+
+div.menu {width:30%; height:60%; border:solid 1px Silver; background-color: #c1cdff; float:left}
+.menu p {margin:0px; border:solid 1px Silver; width:100%; height=10%}
+div.content {margin:0% 0%; height:60%; border:solid 1px Silver; background-color: magenta}
+div.ban {width:20%; height:60%; float:right; border:solid 1px Silver}
+.ban div {Clear:both; border:solid 1px Silver; width:100%; height=50%; margin:0px 0px; background-color: green}
+div.colontitul {border:solid 1px Silver; width:100%; height=20%; margin:5px 0px; text-align:center; background-color: yellow}
+div.colontitul_2 {Clear:both; border:solid 1px Silver; width:100%; height:20%; margin:5px 0px; text-align:center; background-color: red}

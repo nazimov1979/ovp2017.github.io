@@ -1,0 +1,195 @@
+<html>
+<head>
+ <title>РГТЭУ Кемеровский институт</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+ <META name="Author" content="http://ailus.ru"><meta name="Copyright" content="http://ailus.ru">
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" rightmargin="0" bottommargin="0" bgcolor="#ffffff">
+<link href="images/index_2.css" type="text/css" rel="STYLESHEET">
+
+
+<style><!--
+h1 {font-family:tahoma,verdana; text-align:center; font-size:140%; line-height:100%; font-weight:bold;}
+body {font-family:tahoma,verdana; font-size:80%; line-height:130%;}
+a {font-weight:normal;}
+a:link {color:#4a5db0}
+a:active {color:#4a5db0}
+a:visited {color:#4a5db0}
+a:hover{color:#000000}
+
+div.menu {width:30%; height:60%; border:solid 1px Silver; background-color: #c1cdff; float:left}
+.menu p {margin:0px; border:solid 1px Silver; width:100%; height=10%}
+div.content {margin:0% 0%; height:60%; border:solid 1px Silver; background-color: magenta}
+.content td {font-family:tahoma,verdana; font-size:80%}
+div.ban {width:20%; height:60%; float:right; border:solid 1px Silver}
+.ban div {Clear:both; border:solid 1px Silver; width:100%; height=50%; margin:0px 0px; background-color: green}
+div.colontitul {border:solid 1px Silver; width:100%; height=20%; margin:5px 0px; text-align:center; background-color: yellow}
+div.colontitul_2 {Clear:both; border:solid 1px Silver; width:100%; height:20%; margin:5px 0px; text-align:center; background-color: red}
+--></style>
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+//Сценарий выводит точную дату и время посещения страницы
+
+function clock()
+{
+Now = new Date();
+document.write("Сегодня " + Now.getDate()+ 
+"-" + (Now.getMonth()+1) + "-" + Now.getFullYear() 
++ ". Вы зашли на Web-страницу ровно в: " + Now.getHours() + 
+":" + Now.getMinutes() + " и " + Now.getSeconds() + 
+" секунд.")
+
+}
+
+</script>
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+//Сценарий выводит точную дату и время посещения страницы
+
+
+
+
+function processorder()
+
+{  
+
+var tireqty=dataentry.tireqty.value;
+var oilqty=dataentry.oilqty.value;
+var sparkqty=dataentry.sparkqty.value;
+var find=dataentry.find.value;
+var l_tireqty=dataentry.tireqty.value.length;
+var l_oilqty=dataentry.oilqty.value.length;
+var l_sparkqty=dataentry.sparkqty.value.length;
+
+
+var price_tireqty=100;
+var price_oilqty=10;
+var price_sparkqty=4;
+var summa=(tireqty*price_tireqty)+(oilqty*price_oilqty)+(sparkqty*price_sparkqty);
+
+if(l_tireqty ==0) {alert("введите число в поле кол-во покрышек");document.dataentry.tireqty.focus(); } else {
+if(l_oilqty ==0) {alert("введите число в поле кол-во бутылок машинного масла");document.dataentry.oilqty.focus(); } else {
+if(l_sparkqty ==0) {alert("введите число в поле кол-во свечей зажигания");document.dataentry.sparkqty.focus(); } else {
+
+
+
+var nalog=0.10; // местный налог с продаж составляет 10%
+
+
+var summa_2=summa+(summa*nalog);
+
+
+
+Now = new Date();
+
+
+var OpenWindow=window.open("processorder.html");
+
+//var OpenWindow=window.open("processorder.html", "newwin", "height=300,width=300");
+//OpenWindow.document.write("<HTML>");
+//OpenWindow.document.write("<TITLE>Новое окно</TITLE>");
+//OpenWindow.document.write("<BODY BGCOLOR='00ffff'>");
+
+
+//OpenWindow.document.write("длина"+l_tireqty);
+OpenWindow.document.write("<center> <b> Результаты заказа </b> </center> <br> ");
+OpenWindow.document.write("<center> Заказ обработан " + Now.getDate()+"-" + (Now.getMonth()+1) + "-" + Now.getFullYear()+ ". ровно в: " + Now.getHours() + ":" + Now.getMinutes() + " и " + Now.getSeconds() + " секунд.</center><br>")
+OpenWindow.document.write("<center> <b> Список Вашего заказа </b> </center> <br> ");
+OpenWindow.document.write("<center> <b> Автопокрышек-"+tireqty+"штук </b> </center>");
+OpenWindow.document.write("<center> <b> Бутылок с маслом - "+oilqty+"штук </b> </center>");
+OpenWindow.document.write("<center> <b> Свечи зажигания - "+sparkqty+"штук </b> </center>");
+OpenWindow.document.write("<center> <b> Итого- "+summa+"баксиков </b> </center>");
+OpenWindow.document.write("<center> <b> Всего, включая налог с продаж:- "+summa_2+"баксиков </b> </center>");
+OpenWindow.document.write("<center> <b> На вопрос как Вы нашли нашу компанию был получен ответ:- "+find+"<br>");
+OpenWindow.document.write("<a href='' onClick='self.close()'> Эта ссылка закроет окно</a>")
+
+
+}
+}
+}
+}
+
+
+
+</script>
+
+
+
+<div class=colontitul>
+<h1>Лабораторные работы по курсу "Основы веб-программирования" <br> Студента группы ПИ-83: Иванова Виталия Владимировича <br> Проверил: к.т.н. доц. Назимов А.С.</h1>
+</div>
+
+<div class=menu>
+<p><a href="orderform.html">Табличная верстка сайта </a>
+<p><a href="index_2.html">Блочная верстка сайта </a>
+<p><a href="index_3.html">Комбинированная верстка сайта </a>
+</div>
+
+<div class=ban>
+ <div>
+  <P>3
+ </div>
+ <div>
+  <P>4
+ </div>
+</div>
+
+<div class=content>
+
+<h1>Лабораторная работа №2 по теме блочная верстка сайта с использованием CSS и JAVASCRIPT</h1>
+
+
+<form NAME="dataentry">
+<table border=0>
+<tr bgcolor=#cccccc>
+  <td width=150>Товар</td>
+  <td width=15>Количество</td>
+</tr>
+<tr>
+  <td>Автопокрышки</td>
+  <td align="center"><input type="text" name="tireqty" size= "3" maxlength="3" onFocus="window.status='Введите пожалуйста кол-во покрышек';"></td>
+</tr>
+<tr>
+  <td>Машинное масло</td>
+  <td align= "center"><input type="text" name="oilqty" size="3" maxlength="3" onFocus="window.status='Введите пожалуйста кол-во литров машинного масла';"></td>
+</tr>
+<tr>
+  <td>Свечи зажигания</td>
+  <td align="center"><input type="text" name="sparkqty" size= "3" maxlength="3" onFocus="window.status='Введите пожалуйста кол-во свечей зажигания';"></td>
+</tr>
+<tr>
+  <td>Как вы нашли компанию "Автозапчасти от Боба?"</td>
+  <td><select name="find">
+        <option value = "Я регулярный клиент">Я регулярный клиент
+        <option value = "В телевизионной рекламе">В телевизионной рекламе
+        <option value = "В телефонном справочнике">В телефонном справочнике
+        <option value = "Кто-то порекомендовал">Кто-то порекомендовал
+      </select>
+  </td>
+</tr>
+<tr>
+  
+  <td colspan="2" align="center"><input type="submit" value= "Отправить заказ" onclick="processorder()"> </td>
+
+
+
+</tr>
+</table>
+</form>
+
+</div>
+
+<div class=colontitul_2>
+<h2>Кемеровский институт (филиал) РГТЭУ,<br> Кафедра вычислительной техники и информационных технологий, 2008</h2>
+</div>
+
+</body>
+</html>
+
